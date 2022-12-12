@@ -1,0 +1,36 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+    
+    //Dentro de mi canvas, genero un rectangulo que empieza en la coord. 0, 0 y termina en 
+    //600, 400.
+    pincel.fillStyle = "white";
+    pincel.fillRect(0, 0, 600, 400);
+
+    //Ese rectangulo esta pintado de blanco
+    
+
+    //Genero otro rectangulo, de 200 de ancho y 400 de alto, pintado de verde
+    pincel.fillStyle = "green";
+    pincel.fillRect(0, 0, 200, 400);
+
+    //tercer rectangulo, rojo, a la derecha
+    pincel.fillStyle = "red";
+    pincel.fillRect(400, 0, 200, 400);
+
+    //Ahora voy a dibujar un triangulo en la banda del medio
+    pincel.fillStyle = "Yellow";
+    pincel.beginPath();
+    pincel.moveTo(300, 200);
+    pincel.lineTo(200, 400);
+    pincel.lineTo(400, 400);
+    pincel.fill();
+
+    pincel.fillStyle = "blue";
+    pincel.beginPath();
+    pincel.arc(300, 200, 50, 0, 2*3.14);
+    pincel.fill();
+    
+</script>
